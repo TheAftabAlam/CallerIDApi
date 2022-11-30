@@ -1,4 +1,4 @@
-# callerId API 
+# CallerId API 
 
 * We have developed this REST API for an callerID API. This API performs all the fundamental CRUD operations of callerID with user validation at every step.
 
@@ -64,7 +64,7 @@ in the global database, since contact books of multiple registered users may hav
 
 
 
-### Sample API Response for Customer addUser
+### Sample API Response for User addUser
 
 `POST   localhost:8888/addUser`
 
@@ -86,7 +86,6 @@ in the global database, since contact books of multiple registered users may hav
 ```
 
 
-### Sample API Response for Customer addUser
 
 `POST   localhost:8888/login`
 
@@ -103,4 +102,29 @@ in the global database, since contact books of multiple registered users may hav
 
 ```
   CurrentUserSession(userId=16, uuid=60HYEW, localDateTime=2022-11-30T20:58:34.987496700)
+```
 
+`POST  localhost:8888/user/addContact/?key=60HYEW`
+
+
+* Request Body
+
+```
+    { 
+     "name":"Ravi Kumar",
+     "number":"9876543210"
+   
+    }
+```
+
+* Response
+
+```
+ {
+        "contactID": 17,
+        "name": "Ravi Kumar",
+        "number": "9876543210"
+
+}
+
+```
